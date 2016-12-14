@@ -11,7 +11,7 @@ while (choice !== number) {
          alert("Number should be from 0 to 100, please try again!")
     } else if (number == choice) {
 
-         confirm("You are choose the win number! Do you want to play one more time or no ?");
+         alert("You are choose the win number!");
 
     } else if (number < choice) {
 
