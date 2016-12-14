@@ -1,26 +1,28 @@
 var number = Math.round(Math.random() * 100);
 
-var choice = prompt("Hello, if you want to play the game please click OK!");
+var choice;
 
 while (choice !== number) {
 
-    choice = prompt("Plaease enter the number from 0 to 100", "0");
+    choice = parseInt(prompt("Please enter the number from 0 to 100"));
 
-    if (number == choice) {
+    if (number < 0 || number > 100) {
 
-        choice = prompt("You are choose the win number!");
-    } 
+         alert("Number should be from 0 to 100, please try again!")
+    } else if (number == choice) {
 
-    if (number < choice) {
+         alert("You are choose the win number! Do you want to play one more time or no ?");
 
-        choice = prompt("The number is lower, please try again!");
+    } else if (number < choice) {
+
+         alert("The number is lower, please try again!");
 
     } else if (number > choice) {
 
-        choice = prompt("The nubmer is higher, plaese try again!");
+         alert("The nubmer is higher, plaese try again!");
     } else {
-        
-        break
+
+        break;
     }
 
-    }
+}
